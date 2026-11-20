@@ -826,10 +826,16 @@
 
         .education-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            grid-template-columns: repeat(3, 1fr);
             gap: 24px;
-            max-width: 800px;
+            max-width: 900px;
             margin: 0 auto;
+        }
+
+        @media (max-width: 768px) {
+            .education-grid {
+                grid-template-columns: 1fr;
+            }
         }
 
         .education-card {
@@ -1173,8 +1179,8 @@
 
             <div class="about-grid">
                 <div class="about-text">
-                    <p class="animate delay-1">Als journalist werkte ik onder meer voor De Standaard, Knack en VICE. Ik maakte reportages, interviews, analyses en verhalen over uiteenlopende maatschappelijke en culturele thema's. Bij De Standaard werkte ik onder meer op de binnenlandredactie en de podcastredactie.</p>
-                    <p class="animate delay-2">Vandaag werk ik bij StampMedia als eindredacteur tekst. Ik redigeer journalistieke producties van jongeren en begeleid hen bij het uitwerken van verhalen. Daarnaast geef ik workshops rond journalistiek, media en digitale verificatie.</p>
+                    <p class="animate delay-1">Als journalist werkte ik onder meer voor <strong>De Standaard, Knack en VICE</strong>. Ik maakte reportages, interviews, analyses en verhalen over uiteenlopende maatschappelijke en culturele thema's. Bij De Standaard werkte ik onder meer op de binnenlandredactie en de podcastredactie.</p>
+                    <p class="animate delay-2">Vandaag werk ik bij <strong>StampMedia</strong> als eindredacteur tekst. Ik redigeer journalistieke producties van jongeren en begeleid hen bij het uitwerken van verhalen. Daarnaast geef ik workshops rond journalistiek, media en digitale verificatie.</p>
                     <p class="animate delay-2">Ik hou ervan om me in een onderwerp vast te bijten: bronnen zoeken, documenten uitpluizen, verschillende perspectieven naast elkaar leggen en uitzoeken wat er werkelijk speelt. Daarom wil ik mijn ervaring de komende jaren verder inzetten binnen journalistiek onderzoek en datajournalistiek.</p>
 
                     <h3 class="animate delay-3" style="margin-top: 32px;">Waar ik graag aan werk</h3>
