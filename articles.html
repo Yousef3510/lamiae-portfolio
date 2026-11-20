@@ -751,6 +751,9 @@
             <div class="articles-grid" id="articles-grid">
                 <!-- Articles will be inserted by JavaScript -->
             </div>
+            <div id="more-articles" style="display: none; text-align: center; margin-top: 48px;">
+                <a id="more-articles-link" href="#" target="_blank" rel="noopener" style="display: inline-block; color: var(--color-accent); font-weight: 500; text-decoration: none; border: 1px solid var(--color-accent); border-radius: 2px; padding: 12px 28px; transition: var(--transition);">Lees hier meer artikels →</a>
+            </div>
         </div>
     </section>
 
@@ -946,6 +949,24 @@
                     card.style.animationDelay = `${i * 0.03}s`;
                 });
             });
+
+            // "Lees hier meer artikels" per publicatie
+            const moreBox = document.getElementById('more-articles');
+            const moreLink = document.getElementById('more-articles-link');
+            if (moreBox && moreLink) {
+                const MORE_LINKS = {
+                    'Knack': 'https://focus.knack.be/a/lamiae-ben-ayadroularta-be/',
+                    'Knack Focus': 'https://focus.knack.be/a/lamiae-ben-ayadroularta-be/',
+                    'Knack Weekend': 'https://focus.knack.be/a/lamiae-ben-ayadroularta-be/',
+                    'De Standaard': 'https://www.standaard.be/zoeken/?q=Lamiae%20ben%20ayad'
+                };
+                if (MORE_LINKS[filter]) {
+                    moreLink.href = MORE_LINKS[filter];
+                    moreBox.style.display = 'block';
+                } else {
+                    moreBox.style.display = 'none';
+                }
+            }
         }
 
         const FILTER_LABELS = {
